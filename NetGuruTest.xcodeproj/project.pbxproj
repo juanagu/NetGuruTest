@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8389C201B3B394DA20327C92 /* Pods_NetGuruTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AE5C10CC2C2F9A7580E43A /* Pods_NetGuruTest.framework */; };
+		B1368861257581DB003252EA /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1368860257581DB003252EA /* Input.swift */; };
+		B136886425758275003252EA /* GetRealTimeTradesWebSocketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B136886325758275003252EA /* GetRealTimeTradesWebSocketRepository.swift */; };
+		B136886725762E31003252EA /* RealTimeTradesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B136886625762E31003252EA /* RealTimeTradesViewModel.swift */; };
+		B136886C257630C2003252EA /* V1RealTimeTradesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B136886B257630C2003252EA /* V1RealTimeTradesUseCase.swift */; };
+		B13CB4642574DEF300336FEF /* RealTimeTradesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13CB4632574DEF300336FEF /* RealTimeTradesUseCase.swift */; };
+		B13CB4682574DF1F00336FEF /* Trade.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13CB4672574DF1F00336FEF /* Trade.swift */; };
+		B13CB46B2574DFB400336FEF /* GetRealTimeTradesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13CB46A2574DFB400336FEF /* GetRealTimeTradesRepository.swift */; };
+		B13CB46E2574E14C00336FEF /* TradesPersistRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13CB46D2574E14C00336FEF /* TradesPersistRepository.swift */; };
+		B13CB4722574E1F400336FEF /* Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13CB4712574E1F400336FEF /* Output.swift */; };
+		B148D1082574D79300E968D5 /* NetGuruTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148D1072574D79300E968D5 /* NetGuruTestApp.swift */; };
+		B148D10A2574D79300E968D5 /* RealTimeTradesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148D1092574D79300E968D5 /* RealTimeTradesView.swift */; };
+		B148D10C2574D79400E968D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B148D10B2574D79400E968D5 /* Assets.xcassets */; };
+		B148D10F2574D79400E968D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B148D10E2574D79400E968D5 /* Preview Assets.xcassets */; };
+		B16577182576B3D000150180 /* BitcoinSentiment.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B16577172576B3D000150180 /* BitcoinSentiment.mlmodel */; };
+		B165771C2576B43400150180 /* PriceAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165771B2576B43400150180 /* PriceAnalyzer.swift */; };
+		B16577232576B4EA00150180 /* PriceAnalyzerWithML.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16577222576B4EA00150180 /* PriceAnalyzerWithML.swift */; };
+		B16577272576B9D500150180 /* GetRealTimeTradesOrchestraRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16577262576B9D500150180 /* GetRealTimeTradesOrchestraRepository.swift */; };
+		B165772C2576C63B00150180 /* GetRealTimeTradesMockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165772B2576C63B00150180 /* GetRealTimeTradesMockRepository.swift */; };
+		B16577362576CAA300150180 /* GetRealTimeTradesFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16577352576CAA300150180 /* GetRealTimeTradesFeature.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1BB338CC7860B27784465A69 /* Pods-NetGuruTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetGuruTest.debug.xcconfig"; path = "Target Support Files/Pods-NetGuruTest/Pods-NetGuruTest.debug.xcconfig"; sourceTree = "<group>"; };
+		81AE5C10CC2C2F9A7580E43A /* Pods_NetGuruTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetGuruTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1368860257581DB003252EA /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		B136886325758275003252EA /* GetRealTimeTradesWebSocketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRealTimeTradesWebSocketRepository.swift; sourceTree = "<group>"; };
+		B136886625762E31003252EA /* RealTimeTradesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeTradesViewModel.swift; sourceTree = "<group>"; };
+		B136886B257630C2003252EA /* V1RealTimeTradesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V1RealTimeTradesUseCase.swift; sourceTree = "<group>"; };
+		B13CB4632574DEF300336FEF /* RealTimeTradesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeTradesUseCase.swift; sourceTree = "<group>"; };
+		B13CB4672574DF1F00336FEF /* Trade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trade.swift; sourceTree = "<group>"; };
+		B13CB46A2574DFB400336FEF /* GetRealTimeTradesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRealTimeTradesRepository.swift; sourceTree = "<group>"; };
+		B13CB46D2574E14C00336FEF /* TradesPersistRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradesPersistRepository.swift; sourceTree = "<group>"; };
+		B13CB4712574E1F400336FEF /* Output.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Output.swift; sourceTree = "<group>"; };
+		B148D1042574D79300E968D5 /* NetGuruTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetGuruTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B148D1072574D79300E968D5 /* NetGuruTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetGuruTestApp.swift; sourceTree = "<group>"; };
+		B148D1092574D79300E968D5 /* RealTimeTradesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeTradesView.swift; sourceTree = "<group>"; };
+		B148D10B2574D79400E968D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B148D10E2574D79400E968D5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B148D1102574D79400E968D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B16577172576B3D000150180 /* BitcoinSentiment.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BitcoinSentiment.mlmodel; sourceTree = "<group>"; };
+		B165771B2576B43400150180 /* PriceAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAnalyzer.swift; sourceTree = "<group>"; };
+		B16577222576B4EA00150180 /* PriceAnalyzerWithML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAnalyzerWithML.swift; sourceTree = "<group>"; };
+		B16577262576B9D500150180 /* GetRealTimeTradesOrchestraRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRealTimeTradesOrchestraRepository.swift; sourceTree = "<group>"; };
+		B165772B2576C63B00150180 /* GetRealTimeTradesMockRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRealTimeTradesMockRepository.swift; sourceTree = "<group>"; };
+		B16577352576CAA300150180 /* GetRealTimeTradesFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRealTimeTradesFeature.swift; sourceTree = "<group>"; };
+		DC5D449C8847B701E9CB5967 /* Pods-NetGuruTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetGuruTest.release.xcconfig"; path = "Target Support Files/Pods-NetGuruTest/Pods-NetGuruTest.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B148D1012574D79300E968D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8389C201B3B394DA20327C92 /* Pods_NetGuruTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96C3D042529C3B7170AB41AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81AE5C10CC2C2F9A7580E43A /* Pods_NetGuruTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B136886A257630AE003252EA /* V1 */ = {
+			isa = PBXGroup;
+			children = (
+				B136886B257630C2003252EA /* V1RealTimeTradesUseCase.swift */,
+			);
+			name = V1;
+			sourceTree = "<group>";
+		};
+		B13CB4582574DDA800336FEF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B13CB45C2574DDBD00336FEF /* ViewModels */,
+				B13CB45B2574DDB900336FEF /* Views */,
+			);
+			name = Presentation;
+			sourceTree = "<group>";
+		};
+		B13CB4592574DDB000336FEF /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B165771A2576B42700150180 /* Analyzers */,
+				B13CB45F2574DDDE00336FEF /* Repositories */,
+				B13CB45E2574DDD800336FEF /* Entities */,
+				B13CB45D2574DDD100336FEF /* Usecases */,
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
+		B13CB45A2574DDB400336FEF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B16577292576C55300150180 /* Mocks */,
+				B13CB4622574DE1200336FEF /* Mappers */,
+				B13CB4612574DE0300336FEF /* Remotes */,
+				B13CB4602574DDF900336FEF /* Mocks */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B13CB45B2574DDB900336FEF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B148D1092574D79300E968D5 /* RealTimeTradesView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B13CB45C2574DDBD00336FEF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B136886625762E31003252EA /* RealTimeTradesViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		B13CB45D2574DDD100336FEF /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+				B136886A257630AE003252EA /* V1 */,
+				B13CB4632574DEF300336FEF /* RealTimeTradesUseCase.swift */,
+				B13CB4712574E1F400336FEF /* Output.swift */,
+				B1368860257581DB003252EA /* Input.swift */,
+			);
+			path = Usecases;
+			sourceTree = "<group>";
+		};
+		B13CB45E2574DDD800336FEF /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B13CB4672574DF1F00336FEF /* Trade.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		B13CB45F2574DDDE00336FEF /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				B13CB46A2574DFB400336FEF /* GetRealTimeTradesRepository.swift */,
+				B13CB46D2574E14C00336FEF /* TradesPersistRepository.swift */,
+				B16577262576B9D500150180 /* GetRealTimeTradesOrchestraRepository.swift */,
+			);
+			name = Repositories;
+			sourceTree = "<group>";
+		};
+		B13CB4602574DDF900336FEF /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
+		B13CB4612574DE0300336FEF /* Remotes */ = {
+			isa = PBXGroup;
+			children = (
+				B136886325758275003252EA /* GetRealTimeTradesWebSocketRepository.swift */,
+			);
+			path = Remotes;
+			sourceTree = "<group>";
+		};
+		B13CB4622574DE1200336FEF /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Mappers;
+			sourceTree = "<group>";
+		};
+		B148D0FB2574D79300E968D5 = {
+			isa = PBXGroup;
+			children = (
+				B16577162576B3AD00150180 /* MachineLearningModels */,
+				B148D1062574D79300E968D5 /* NetGuruTest */,
+				B148D1052574D79300E968D5 /* Products */,
+				F6459AFFD46064D9B4245021 /* Pods */,
+				96C3D042529C3B7170AB41AD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B148D1052574D79300E968D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B148D1042574D79300E968D5 /* NetGuruTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B148D1062574D79300E968D5 /* NetGuruTest */ = {
+			isa = PBXGroup;
+			children = (
+				B16577342576CA8600150180 /* GetRealTimeTradesFeature */,
+				B148D1072574D79300E968D5 /* NetGuruTestApp.swift */,
+				B148D10B2574D79400E968D5 /* Assets.xcassets */,
+				B148D1102574D79400E968D5 /* Info.plist */,
+				B148D10D2574D79400E968D5 /* Preview Content */,
+			);
+			path = NetGuruTest;
+			sourceTree = "<group>";
+		};
+		B148D10D2574D79400E968D5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B148D10E2574D79400E968D5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B16577162576B3AD00150180 /* MachineLearningModels */ = {
+			isa = PBXGroup;
+			children = (
+				B16577172576B3D000150180 /* BitcoinSentiment.mlmodel */,
+			);
+			name = MachineLearningModels;
+			sourceTree = "<group>";
+		};
+		B165771A2576B42700150180 /* Analyzers */ = {
+			isa = PBXGroup;
+			children = (
+				B165771B2576B43400150180 /* PriceAnalyzer.swift */,
+				B16577222576B4EA00150180 /* PriceAnalyzerWithML.swift */,
+			);
+			path = Analyzers;
+			sourceTree = "<group>";
+		};
+		B16577292576C55300150180 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B165772B2576C63B00150180 /* GetRealTimeTradesMockRepository.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		B16577342576CA8600150180 /* GetRealTimeTradesFeature */ = {
+			isa = PBXGroup;
+			children = (
+				B13CB45A2574DDB400336FEF /* Data */,
+				B13CB4592574DDB000336FEF /* Domain */,
+				B13CB4582574DDA800336FEF /* Presentation */,
+				B16577352576CAA300150180 /* GetRealTimeTradesFeature.swift */,
+			);
+			name = GetRealTimeTradesFeature;
+			sourceTree = "<group>";
+		};
+		F6459AFFD46064D9B4245021 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1BB338CC7860B27784465A69 /* Pods-NetGuruTest.debug.xcconfig */,
+				DC5D449C8847B701E9CB5967 /* Pods-NetGuruTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B148D1032574D79300E968D5 /* NetGuruTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B148D1132574D79400E968D5 /* Build configuration list for PBXNativeTarget "NetGuruTest" */;
+			buildPhases = (
+				EEFDEEF2707BA016EC7A461F /* [CP] Check Pods Manifest.lock */,
+				B148D1002574D79300E968D5 /* Sources */,
+				B148D1012574D79300E968D5 /* Frameworks */,
+				B148D1022574D79300E968D5 /* Resources */,
+				A657EA86295E3BEB1D11B294 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetGuruTest;
+			productName = NetGuruTest;
+			productReference = B148D1042574D79300E968D5 /* NetGuruTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B148D0FC2574D79300E968D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					B148D1032574D79300E968D5 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = B148D0FF2574D79300E968D5 /* Build configuration list for PBXProject "NetGuruTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B148D0FB2574D79300E968D5;
+			productRefGroup = B148D1052574D79300E968D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B148D1032574D79300E968D5 /* NetGuruTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B148D1022574D79300E968D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B148D10F2574D79400E968D5 /* Preview Assets.xcassets in Resources */,
+				B148D10C2574D79400E968D5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A657EA86295E3BEB1D11B294 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NetGuruTest/Pods-NetGuruTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NetGuruTest/Pods-NetGuruTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NetGuruTest/Pods-NetGuruTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEFDEEF2707BA016EC7A461F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NetGuruTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B148D1002574D79300E968D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B165772C2576C63B00150180 /* GetRealTimeTradesMockRepository.swift in Sources */,
+				B148D10A2574D79300E968D5 /* RealTimeTradesView.swift in Sources */,
+				B148D1082574D79300E968D5 /* NetGuruTestApp.swift in Sources */,
+				B13CB4682574DF1F00336FEF /* Trade.swift in Sources */,
+				B16577362576CAA300150180 /* GetRealTimeTradesFeature.swift in Sources */,
+				B16577182576B3D000150180 /* BitcoinSentiment.mlmodel in Sources */,
+				B16577272576B9D500150180 /* GetRealTimeTradesOrchestraRepository.swift in Sources */,
+				B16577232576B4EA00150180 /* PriceAnalyzerWithML.swift in Sources */,
+				B165771C2576B43400150180 /* PriceAnalyzer.swift in Sources */,
+				B13CB4722574E1F400336FEF /* Output.swift in Sources */,
+				B136886725762E31003252EA /* RealTimeTradesViewModel.swift in Sources */,
+				B13CB46E2574E14C00336FEF /* TradesPersistRepository.swift in Sources */,
+				B136886C257630C2003252EA /* V1RealTimeTradesUseCase.swift in Sources */,
+				B136886425758275003252EA /* GetRealTimeTradesWebSocketRepository.swift in Sources */,
+				B13CB4642574DEF300336FEF /* RealTimeTradesUseCase.swift in Sources */,
+				B1368861257581DB003252EA /* Input.swift in Sources */,
+				B13CB46B2574DFB400336FEF /* GetRealTimeTradesRepository.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B148D1112574D79400E968D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B148D1122574D79400E968D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B148D1142574D79400E968D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BB338CC7860B27784465A69 /* Pods-NetGuruTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"NetGuruTest/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = NetGuruTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juanagu.NetGuruTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B148D1152574D79400E968D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC5D449C8847B701E9CB5967 /* Pods-NetGuruTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"NetGuruTest/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = NetGuruTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juanagu.NetGuruTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B148D0FF2574D79300E968D5 /* Build configuration list for PBXProject "NetGuruTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B148D1112574D79400E968D5 /* Debug */,
+				B148D1122574D79400E968D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B148D1132574D79400E968D5 /* Build configuration list for PBXNativeTarget "NetGuruTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B148D1142574D79400E968D5 /* Debug */,
+				B148D1152574D79400E968D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B148D0FC2574D79300E968D5 /* Project object */;
+}
