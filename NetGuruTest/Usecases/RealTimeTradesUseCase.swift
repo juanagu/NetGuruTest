@@ -9,5 +9,5 @@ import Foundation
 import RxSwift
 
 public protocol RealTimeTradesUseCase {
-    func execute(input: Input);
+    func execute() -> Observable<Trade>;
 }

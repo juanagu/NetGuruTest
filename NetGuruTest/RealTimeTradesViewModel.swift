@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import RxSwift
 
-public class RealTimeTradesViewModel: ObservableObject, Input {
+public class RealTimeTradesViewModel: ObservableObject {
     
     @Published private(set) var state = State.idle
     private var useCase: RealTimeTradesUseCase
@@ -20,23 +21,32 @@ public class RealTimeTradesViewModel: ObservableObject, Input {
     
     func fetch(){
         state = State.loading
-        useCase.execute(input: self)
+        useCase.execute()
+            .subscribe(on: ConcurrentDispatchQueueScheduler(qos: .background))
+            .observe(on: MainScheduler.instance)
+            .subscribe { (trade) in
+                self.addTrade(trade: trade)
+            } onError: { (error) in
+                self.showError(error: error)
+            }
+        
     }
     
-    public func received(output: Output) {
+    public func addTrade(trade: Trade) {
         if(self.hasMaxCapacity()){
             self.trades.removeAll()
         }
         
-        self.trades.append(output.trade)
-
-        DispatchQueue.main.async {
-            self.state = State.loaded(self.trades)
-        }
+        self.trades.append(trade)
+        self.state = State.loaded(self.trades)
     }
     
-    fileprivate func hasMaxCapacity() -> Bool {
+    private func hasMaxCapacity() -> Bool {
         return self.trades.count == maxTradeCapacity
+    }
+    
+    private func showError(error: Error){
+        self.state = State.error(error, self.trades)
     }
 }
 

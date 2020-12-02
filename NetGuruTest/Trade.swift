@@ -33,23 +33,23 @@ public struct Trade : Identifiable {
          timestamp: String,
          price: Double,
          amount: Double,
-         sentimental: Double) {
+         sentiment: Double) {
         self.id = id
         self.buyOrderId = buyOrderId
         self.timestamp = timestamp
         self.price = price
         self.amount = amount
-        self.sentiment = sentimental
+        self.sentiment = sentiment
     }
     
-    func withSentimental(sentimental: Double) -> Trade{
+    func withSentiment(sentiment: Double) -> Trade{
         return Trade(
             id: self.id,
             buyOrderId: self.buyOrderId,
             timestamp: self.timestamp,
             price: self.price,
             amount: self.amount,
-            sentimental: sentimental
+            sentiment: sentiment
         );
     }
 }
