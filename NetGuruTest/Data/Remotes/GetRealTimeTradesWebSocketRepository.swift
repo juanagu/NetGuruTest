@@ -11,13 +11,17 @@ import RxSwift
 
 class GetRealTimeTradesWebSocketRepository: GetRealTimeTradesRepository, WebSocketDelegate{
     
+    private let event = "trade"
+    private let channel = "live_trades_btcusd"
+    private let webSocketUrl = "wss://ws.bitstamp.net"
+    
     private let server = WebSocketServer()
     private var socket: WebSocket!
     private var isConnected = false
     private var observer: AnyObserver<Trade>?
 
     func connect() -> Observable<Trade> {
-        var request = URLRequest(url: URL(string: "wss://ws.bitstamp.net")!)
+        var request = URLRequest(url: URL(string: webSocketUrl)!)
         request.timeoutInterval = 5
         socket = WebSocket(request: request)
         socket.delegate = self
@@ -34,29 +38,27 @@ class GetRealTimeTradesWebSocketRepository: GetRealTimeTradesRepository, WebSock
         socket.disconnect()
     }
     
-    fileprivate func isTradeEvent(_ json: Dictionary<String,Any>) -> Bool{
-        let event : String = json["event"] as! String;
-        return event == "trade"
+    fileprivate func isTradeEvent(_ json: Dictionary<String,Any>?) -> Bool{
+        if(json == nil) {return false;}
+        let event : String = json!["event"] as! String;
+        return event == self.event
     }
     
     func didReceive(event: WebSocketEvent, client: WebSocket) {
         switch event {
-                case .connected(let headers):
+                case .connected:
                     isConnected = true
-                    print("websocket is connected: \(headers)")
                     sendMessageToSubscribe()
-                case .disconnected(let reason, let code):
+                    break
+                case .disconnected:
                     isConnected = false
-                    print("websocket is disconnected: \(reason) with code: \(code)")
+                    socket.connect()
+                    break
                 case .text(let string):
-                    print("Received text: \(string)")
-                    if let json = stringToJson(string: string){
-                        if(isTradeEvent(json)){
-                            observer?.onNext(jsonToTrade(json: json["data"] as! Dictionary<String, Any>))
-                        }
-                    }
+                    notifyNewTrade(string)
                 case .binary(let data):
-                    print("Received data: \(data.count)")
+                    print("Received binary: \(data)")
+                    break
                 case .ping(_):
                     break
                 case .pong(_):
@@ -74,26 +76,29 @@ class GetRealTimeTradesWebSocketRepository: GetRealTimeTradesRepository, WebSock
     }
     
     func handleError(_ error: Error?) {
-            if let e = error as? WSError {
-                print("websocket encountered an error: \(e.message)")
-            } else if let e = error {
-                print("websocket encountered an error: \(e.localizedDescription)")
-            } else {
-                print("websocket encountered an error")
-            }
+        observer?.onError(error!)
     }
     
-    func sendMessageToSubscribe(){
+    fileprivate func sendMessageToSubscribe(){
         let jsonObject = [
             "event": "bts:subscribe",
-            "data": ["channel":"live_trades_btcusd"]
+            "data": ["channel": self.channel]
         ] as [String : Any]
         
         let jsonData = (try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted))!
         socket.write(data: jsonData)
     }
     
-    func stringToJson(string: String) -> Dictionary<String,Any>?{
+    fileprivate func notifyNewTrade(_ string: (String)) {
+        if let json = stringToJson(string: string){
+            if(isTradeEvent(json)){
+                let data = json["data"] as! Dictionary<String, Any>
+                observer?.onNext(TradeDataMapper(json: data).toEntity())
+            }
+        }
+    }
+    
+    fileprivate func stringToJson(string: String) -> Dictionary<String,Any>?{
         let data = string.data(using: .utf8)!
             do {
                 return try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? Dictionary<String,Any>;
@@ -102,14 +107,4 @@ class GetRealTimeTradesWebSocketRepository: GetRealTimeTradesRepository, WebSock
             }
         return nil
     }
-    
-    func jsonToTrade(json: Dictionary<String,Any>) -> Trade {
-        return Trade(
-            buyOrderId: json["buy_order_id"] as! Int64,
-            timestamp: json["timestamp"] as! String,
-            price: json["price"] as! Double,
-            amount: json["amount"] as! Double
-        )
-    }
-    
 }

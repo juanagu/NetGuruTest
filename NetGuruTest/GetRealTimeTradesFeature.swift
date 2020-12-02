@@ -24,11 +24,13 @@ public class GetRealTimeTradesFeature{
     {
         return V1RealTimeTradesUseCase(
             getRealTimeTradesRepository: provideGetRepository(),
-            priceAnalyzer: providePriceAnalyzer())
+            priceAnalyzer: providePriceAnalyzer(),
+            tradePersistRepository: provideTradePersistRepository())
     }
     
     fileprivate func provideGetRepository() -> GetRealTimeTradesRepository{
-        return GetRealTimeTradesOrchestraRepository(repositories: provideRepositoryRules())
+        return GetRealTimeTradesOrchestraRepository(
+            repositoryRules: provideRepositoryRules())
     }
     
     fileprivate func providePriceAnalyzer() -> PriceAnalyzer
@@ -39,8 +41,14 @@ public class GetRealTimeTradesFeature{
     fileprivate func provideRepositoryRules() -> [RepositoryRule]
     {
         return [
-            RepositoryRule(maxRecords: 10, repository: GetRealTimeTradesWebSocketRepository()),
-            RepositoryRule(maxRecords: 5, repository: GetRealTimeTradesMockRepository()),
+            RepositoryRule(maxRecords: 100,
+                           repository: GetRealTimeTradesWebSocketRepository()),
+            RepositoryRule(maxRecords: 25,
+                           repository: GetRealTimeTradesMockRepository()),
         ]
+    }
+    
+    fileprivate func provideTradePersistRepository() -> TradePersistRepository{
+        return TradePersistLoggerRepository()
     }
 }

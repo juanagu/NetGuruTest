@@ -5,9 +5,8 @@
 //  Created by Juan Ignacio Agu on 30/11/2020.
 //
 
+import Combine
 import SwiftUI
-import RxSwift
-import Starscream
 
 struct RealTimeTradesView: View {
     @ObservedObject var viewModel : RealTimeTradesViewModel
@@ -18,32 +17,44 @@ struct RealTimeTradesView: View {
     
     var body: some View {
         NavigationView {
-            List(viewModel.trades, id: \.self) {
-                TradeView(trade: $0)
-            }.navigationBarTitle("Real Time Trades")
-                .onAppear {
-                    self.viewModel.fetch()
-                }
+            content
+                .navigationBarTitle("Real Time Trades")
         }
+        .onAppear { self.viewModel.fetch() }
+    }
+    
+    
+    var content: some View {
+        switch viewModel.state {
+        case .error(let error, let trades):
+            return errorView(error: error, trades: trades).eraseToAnyView()
+        case .loaded(let trades):
+            return listView(of: trades).eraseToAnyView()
+        default:
+            return progressView().eraseToAnyView()
+        }
+    }
+    
+    private func listView(of trades: [Trade]) -> some View {
+        return List(trades) { trade in
+            TradeItemView(trade: trade)
+        }
+    }
+    
+    private func errorView(error: Error, trades : [Trade]) -> some View {
+        HStack{
+            Text(error.localizedDescription).eraseToAnyView()
+            listView(of: trades)
+        }
+    }
+    
+    private func progressView() -> some View {
+        return ProgressView()
     }
 }
 
-struct TradeView: View {
-    private let trade: Trade
-    init(trade: Trade) {
-        self.trade = trade
-    }
-    
-    var body: some View {
-        VStack {
-            Text(trade.timestamp)
-                    .font(.system(size: 12))
-            Text(String(trade.price))
-                    .font(.system(size: 14))
-                    .foregroundColor(Color.blue)
-            Text(String(trade.sentimental))
-                    .font(.system(size: 12))
-                    .foregroundColor(Color.orange)
-        }
+extension View {
+    func eraseToAnyView() -> AnyView {
+        AnyView(self)
     }
 }

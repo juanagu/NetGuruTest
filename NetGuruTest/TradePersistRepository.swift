@@ -8,6 +8,6 @@
 import Foundation
 import RxSwift
 
-public protocol TradesPersistRepository{
-    func save(trades: [Trade]) -> Observable<Bool>
+public protocol TradePersistRepository{
+    func save(trade: Trade)
 }

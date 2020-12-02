@@ -22,10 +22,15 @@ public class GetRealTimeTradesMockRepository : GetRealTimeTradesRepository {
     
     fileprivate func makeFakeTrade() -> Trade{
         return Trade(
-            buyOrderId: Int64(Int.random(in: 1..<999999)),
-            timestamp: currentTimestamp(),
+            id: randomInt(),
+            buyOrderId: randomInt(),
+            timestamp: "Fake: \(currentTimestamp())",
             price: randomDouble(),
             amount: randomDouble())
+    }
+    
+    fileprivate func randomInt() -> Int {
+        return Int.random(in: 1..<999999)
     }
     
     fileprivate func randomDouble() -> Double{

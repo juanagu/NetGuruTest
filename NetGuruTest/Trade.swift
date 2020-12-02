@@ -7,39 +7,44 @@
 
 import Foundation
 
-public struct Trade : Hashable {
-    
-    let buyOrderId: Int64
+public struct Trade : Identifiable {
+    public let id: Int
+    let buyOrderId: Int
     let timestamp : String
     let price : Double
     let amount: Double
-    let sentimental: Double
+    let sentiment: Double
     
-    init(buyOrderId: Int64,
+    init(id: Int,
+         buyOrderId: Int,
          timestamp: String,
          price: Double,
          amount: Double) {
+        self.id = id
         self.buyOrderId = buyOrderId
         self.timestamp = timestamp
         self.price = price
         self.amount = amount
-        self.sentimental = -1
+        self.sentiment = -1
     }
     
-    init(buyOrderId: Int64,
+    init(id: Int,
+         buyOrderId: Int,
          timestamp: String,
          price: Double,
          amount: Double,
          sentimental: Double) {
+        self.id = id
         self.buyOrderId = buyOrderId
         self.timestamp = timestamp
         self.price = price
         self.amount = amount
-        self.sentimental = sentimental
+        self.sentiment = sentimental
     }
     
     func withSentimental(sentimental: Double) -> Trade{
         return Trade(
+            id: self.id,
             buyOrderId: self.buyOrderId,
             timestamp: self.timestamp,
             price: self.price,

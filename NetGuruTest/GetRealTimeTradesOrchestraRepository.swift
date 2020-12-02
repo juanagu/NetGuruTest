@@ -10,14 +10,14 @@ import RxSwift
 
 public class GetRealTimeTradesOrchestraRepository : GetRealTimeTradesRepository{
     
-    private var repositories : [RepositoryRule];
+    private var repositoryRules : [RepositoryRule];
     private var index = 0;
     private var counter : Int = 0;
     private var observer: AnyObserver<Trade>?
     private var disposeBag = DisposeBag()
-
-    init(repositories : [RepositoryRule]){
-        self.repositories = repositories;
+    
+    init(repositoryRules : [RepositoryRule]){
+        self.repositoryRules = repositoryRules
     }
     
     public func connect() -> Observable<Trade> {
@@ -39,30 +39,31 @@ public class GetRealTimeTradesOrchestraRepository : GetRealTimeTradesRepository{
             .observe(on: ConcurrentDispatchQueueScheduler.init(queue: .global()))
             .subscribe (
                 onNext: { trade in
-                self.counter+=1;
-                self.observer?.onNext(trade)
-                self.checkIfNeedSwitchToRepository()
+                    self.counter+=1;
+                    self.observer?.onNext(trade)
+                    self.checkIfNeedSwitchToRepository()
                 }
             ).disposed(by: disposeBag);
     }
     
     fileprivate func currentRepository() -> GetRealTimeTradesRepository{
-        return repositories[index].repository;
+        return repositoryRules[index].repository;
     }
- 
+    
     fileprivate func checkIfNeedSwitchToRepository(){
-        if(repositories.capacity > 1 &&  counter == repositories[index].maxRecords){
+        if(repositoryRules.count > 1 &&  counter == repositoryRules[index].maxRecords){
             switchRepository()
         }
     }
     
     fileprivate func switchRepository() {
-        if(index < repositories.capacity ){
+        if(index < repositoryRules.count-1 ){
             index+=1
         }else{
             index = 0
         }
         
+        counter = 0
         disposeBag = DisposeBag()
         connectToCurrentRepository()
     }
