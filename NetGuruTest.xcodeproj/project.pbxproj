@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DF751EEE6759CCB8B4B5D06 /* libPods-NetGuruTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4B815FBB609453143F122E /* libPods-NetGuruTestTests.a */; };
 		8389C201B3B394DA20327C92 /* Pods_NetGuruTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AE5C10CC2C2F9A7580E43A /* Pods_NetGuruTest.framework */; };
 		B136886425758275003252EA /* GetRealTimeTradesWebSocketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B136886325758275003252EA /* GetRealTimeTradesWebSocketRepository.swift */; };
 		B136886725762E31003252EA /* RealTimeTradesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B136886625762E31003252EA /* RealTimeTradesViewModel.swift */; };
@@ -28,8 +29,6 @@
 		B165773B2576D7D000150180 /* TradeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165773A2576D7D000150180 /* TradeItemView.swift */; };
 		B165773E2576D85000150180 /* TradePersistLoggerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165773D2576D85000150180 /* TradePersistLoggerRepository.swift */; };
 		B16577572576F8D000150180 /* TradeDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16577562576F8D000150180 /* TradeDataMapper.swift */; };
-		B16D6E512578BDF1000A804E /* NetGuruTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D6E502578BDF1000A804E /* NetGuruTestTests.swift */; };
-		B16D6E772578C98C000A804E /* RealTimeTradesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D6E762578C98C000A804E /* RealTimeTradesUseCaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		1BB338CC7860B27784465A69 /* Pods-NetGuruTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetGuruTest.debug.xcconfig"; path = "Target Support Files/Pods-NetGuruTest/Pods-NetGuruTest.debug.xcconfig"; sourceTree = "<group>"; };
+		3F4B815FBB609453143F122E /* libPods-NetGuruTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetGuruTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DF7877D92E97405967492B3 /* Pods-NetGuruTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetGuruTestTests.release.xcconfig"; path = "Target Support Files/Pods-NetGuruTestTests/Pods-NetGuruTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		81AE5C10CC2C2F9A7580E43A /* Pods_NetGuruTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetGuruTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B136886325758275003252EA /* GetRealTimeTradesWebSocketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRealTimeTradesWebSocketRepository.swift; sourceTree = "<group>"; };
 		B136886625762E31003252EA /* RealTimeTradesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeTradesViewModel.swift; sourceTree = "<group>"; };
@@ -68,9 +69,8 @@
 		B165773D2576D85000150180 /* TradePersistLoggerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradePersistLoggerRepository.swift; sourceTree = "<group>"; };
 		B16577562576F8D000150180 /* TradeDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeDataMapper.swift; sourceTree = "<group>"; };
 		B16D6E4E2578BDF1000A804E /* NetGuruTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetGuruTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B16D6E502578BDF1000A804E /* NetGuruTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetGuruTestTests.swift; sourceTree = "<group>"; };
 		B16D6E522578BDF1000A804E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B16D6E762578C98C000A804E /* RealTimeTradesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeTradesUseCaseTests.swift; sourceTree = "<group>"; };
+		D6A7809156B87A9E55D2181A /* Pods-NetGuruTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetGuruTestTests.debug.xcconfig"; path = "Target Support Files/Pods-NetGuruTestTests/Pods-NetGuruTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DC5D449C8847B701E9CB5967 /* Pods-NetGuruTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetGuruTest.release.xcconfig"; path = "Target Support Files/Pods-NetGuruTest/Pods-NetGuruTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DF751EEE6759CCB8B4B5D06 /* libPods-NetGuruTestTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				81AE5C10CC2C2F9A7580E43A /* Pods_NetGuruTest.framework */,
+				3F4B815FBB609453143F122E /* libPods-NetGuruTestTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -280,27 +282,9 @@
 		B16D6E4F2578BDF1000A804E /* NetGuruTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				B16D6E5A2578BE0C000A804E /* GetRealTimeTradesFeature */,
-				B16D6E502578BDF1000A804E /* NetGuruTestTests.swift */,
 				B16D6E522578BDF1000A804E /* Info.plist */,
 			);
 			path = NetGuruTestTests;
-			sourceTree = "<group>";
-		};
-		B16D6E5A2578BE0C000A804E /* GetRealTimeTradesFeature */ = {
-			isa = PBXGroup;
-			children = (
-				B16D6E5B2578BE18000A804E /* Domain */,
-			);
-			name = GetRealTimeTradesFeature;
-			sourceTree = "<group>";
-		};
-		B16D6E5B2578BE18000A804E /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				B16D6E762578C98C000A804E /* RealTimeTradesUseCaseTests.swift */,
-			);
-			path = Domain;
 			sourceTree = "<group>";
 		};
 		F6459AFFD46064D9B4245021 /* Pods */ = {
@@ -308,6 +292,8 @@
 			children = (
 				1BB338CC7860B27784465A69 /* Pods-NetGuruTest.debug.xcconfig */,
 				DC5D449C8847B701E9CB5967 /* Pods-NetGuruTest.release.xcconfig */,
+				D6A7809156B87A9E55D2181A /* Pods-NetGuruTestTests.debug.xcconfig */,
+				5DF7877D92E97405967492B3 /* Pods-NetGuruTestTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -338,6 +324,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B16D6E572578BDF1000A804E /* Build configuration list for PBXNativeTarget "NetGuruTestTests" */;
 			buildPhases = (
+				D2DC2E6E25823AA78825A318 /* [CP] Check Pods Manifest.lock */,
 				B16D6E4A2578BDF1000A804E /* Sources */,
 				B16D6E4B2578BDF1000A804E /* Frameworks */,
 				B16D6E4C2578BDF1000A804E /* Resources */,
@@ -426,6 +413,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NetGuruTest/Pods-NetGuruTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D2DC2E6E25823AA78825A318 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NetGuruTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EEFDEEF2707BA016EC7A461F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -480,8 +489,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B16D6E772578C98C000A804E /* RealTimeTradesUseCaseTests.swift in Sources */,
-				B16D6E512578BDF1000A804E /* NetGuruTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +665,7 @@
 		};
 		B16D6E552578BDF1000A804E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6A7809156B87A9E55D2181A /* Pods-NetGuruTestTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -677,6 +685,7 @@
 		};
 		B16D6E562578BDF1000A804E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DF7877D92E97405967492B3 /* Pods-NetGuruTestTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
