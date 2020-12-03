@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8389C201B3B394DA20327C92 /* Pods_NetGuruTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AE5C10CC2C2F9A7580E43A /* Pods_NetGuruTest.framework */; };
-		B1368861257581DB003252EA /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1368860257581DB003252EA /* Input.swift */; };
 		B136886425758275003252EA /* GetRealTimeTradesWebSocketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B136886325758275003252EA /* GetRealTimeTradesWebSocketRepository.swift */; };
 		B136886725762E31003252EA /* RealTimeTradesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B136886625762E31003252EA /* RealTimeTradesViewModel.swift */; };
 		B136886C257630C2003252EA /* V1RealTimeTradesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B136886B257630C2003252EA /* V1RealTimeTradesUseCase.swift */; };
@@ -16,7 +15,6 @@
 		B13CB4682574DF1F00336FEF /* Trade.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13CB4672574DF1F00336FEF /* Trade.swift */; };
 		B13CB46B2574DFB400336FEF /* GetRealTimeTradesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13CB46A2574DFB400336FEF /* GetRealTimeTradesRepository.swift */; };
 		B13CB46E2574E14C00336FEF /* TradePersistRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13CB46D2574E14C00336FEF /* TradePersistRepository.swift */; };
-		B13CB4722574E1F400336FEF /* Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13CB4712574E1F400336FEF /* Output.swift */; };
 		B148D1082574D79300E968D5 /* NetGuruTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148D1072574D79300E968D5 /* NetGuruTestApp.swift */; };
 		B148D10A2574D79300E968D5 /* RealTimeTradesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148D1092574D79300E968D5 /* RealTimeTradesView.swift */; };
 		B148D10C2574D79400E968D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B148D10B2574D79400E968D5 /* Assets.xcassets */; };
@@ -30,12 +28,23 @@
 		B165773B2576D7D000150180 /* TradeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165773A2576D7D000150180 /* TradeItemView.swift */; };
 		B165773E2576D85000150180 /* TradePersistLoggerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165773D2576D85000150180 /* TradePersistLoggerRepository.swift */; };
 		B16577572576F8D000150180 /* TradeDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16577562576F8D000150180 /* TradeDataMapper.swift */; };
+		B16D6E512578BDF1000A804E /* NetGuruTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D6E502578BDF1000A804E /* NetGuruTestTests.swift */; };
+		B16D6E772578C98C000A804E /* RealTimeTradesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D6E762578C98C000A804E /* RealTimeTradesUseCaseTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B16D6E532578BDF1000A804E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B148D0FC2574D79300E968D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B148D1032574D79300E968D5;
+			remoteInfo = NetGuruTest;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1BB338CC7860B27784465A69 /* Pods-NetGuruTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetGuruTest.debug.xcconfig"; path = "Target Support Files/Pods-NetGuruTest/Pods-NetGuruTest.debug.xcconfig"; sourceTree = "<group>"; };
 		81AE5C10CC2C2F9A7580E43A /* Pods_NetGuruTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetGuruTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1368860257581DB003252EA /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		B136886325758275003252EA /* GetRealTimeTradesWebSocketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRealTimeTradesWebSocketRepository.swift; sourceTree = "<group>"; };
 		B136886625762E31003252EA /* RealTimeTradesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeTradesViewModel.swift; sourceTree = "<group>"; };
 		B136886B257630C2003252EA /* V1RealTimeTradesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V1RealTimeTradesUseCase.swift; sourceTree = "<group>"; };
@@ -43,7 +52,6 @@
 		B13CB4672574DF1F00336FEF /* Trade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trade.swift; sourceTree = "<group>"; };
 		B13CB46A2574DFB400336FEF /* GetRealTimeTradesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRealTimeTradesRepository.swift; sourceTree = "<group>"; };
 		B13CB46D2574E14C00336FEF /* TradePersistRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradePersistRepository.swift; sourceTree = "<group>"; };
-		B13CB4712574E1F400336FEF /* Output.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Output.swift; sourceTree = "<group>"; };
 		B148D1042574D79300E968D5 /* NetGuruTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetGuruTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B148D1072574D79300E968D5 /* NetGuruTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetGuruTestApp.swift; sourceTree = "<group>"; };
 		B148D1092574D79300E968D5 /* RealTimeTradesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeTradesView.swift; sourceTree = "<group>"; };
@@ -59,6 +67,10 @@
 		B165773A2576D7D000150180 /* TradeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeItemView.swift; sourceTree = "<group>"; };
 		B165773D2576D85000150180 /* TradePersistLoggerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradePersistLoggerRepository.swift; sourceTree = "<group>"; };
 		B16577562576F8D000150180 /* TradeDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeDataMapper.swift; sourceTree = "<group>"; };
+		B16D6E4E2578BDF1000A804E /* NetGuruTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetGuruTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B16D6E502578BDF1000A804E /* NetGuruTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetGuruTestTests.swift; sourceTree = "<group>"; };
+		B16D6E522578BDF1000A804E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B16D6E762578C98C000A804E /* RealTimeTradesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeTradesUseCaseTests.swift; sourceTree = "<group>"; };
 		DC5D449C8847B701E9CB5967 /* Pods-NetGuruTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetGuruTest.release.xcconfig"; path = "Target Support Files/Pods-NetGuruTest/Pods-NetGuruTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +80,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8389C201B3B394DA20327C92 /* Pods_NetGuruTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B16D6E4B2578BDF1000A804E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +161,6 @@
 			children = (
 				B136886A257630AE003252EA /* V1 */,
 				B13CB4632574DEF300336FEF /* RealTimeTradesUseCase.swift */,
-				B13CB4712574E1F400336FEF /* Output.swift */,
-				B1368860257581DB003252EA /* Input.swift */,
 			);
 			path = Usecases;
 			sourceTree = "<group>";
@@ -187,6 +204,7 @@
 			children = (
 				B16577162576B3AD00150180 /* MachineLearningModels */,
 				B148D1062574D79300E968D5 /* NetGuruTest */,
+				B16D6E4F2578BDF1000A804E /* NetGuruTestTests */,
 				B148D1052574D79300E968D5 /* Products */,
 				F6459AFFD46064D9B4245021 /* Pods */,
 				96C3D042529C3B7170AB41AD /* Frameworks */,
@@ -197,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				B148D1042574D79300E968D5 /* NetGuruTest.app */,
+				B16D6E4E2578BDF1000A804E /* NetGuruTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -258,6 +277,32 @@
 			name = GetRealTimeTradesFeature;
 			sourceTree = "<group>";
 		};
+		B16D6E4F2578BDF1000A804E /* NetGuruTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				B16D6E5A2578BE0C000A804E /* GetRealTimeTradesFeature */,
+				B16D6E502578BDF1000A804E /* NetGuruTestTests.swift */,
+				B16D6E522578BDF1000A804E /* Info.plist */,
+			);
+			path = NetGuruTestTests;
+			sourceTree = "<group>";
+		};
+		B16D6E5A2578BE0C000A804E /* GetRealTimeTradesFeature */ = {
+			isa = PBXGroup;
+			children = (
+				B16D6E5B2578BE18000A804E /* Domain */,
+			);
+			name = GetRealTimeTradesFeature;
+			sourceTree = "<group>";
+		};
+		B16D6E5B2578BE18000A804E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B16D6E762578C98C000A804E /* RealTimeTradesUseCaseTests.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		F6459AFFD46064D9B4245021 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +334,24 @@
 			productReference = B148D1042574D79300E968D5 /* NetGuruTest.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B16D6E4D2578BDF1000A804E /* NetGuruTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B16D6E572578BDF1000A804E /* Build configuration list for PBXNativeTarget "NetGuruTestTests" */;
+			buildPhases = (
+				B16D6E4A2578BDF1000A804E /* Sources */,
+				B16D6E4B2578BDF1000A804E /* Frameworks */,
+				B16D6E4C2578BDF1000A804E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B16D6E542578BDF1000A804E /* PBXTargetDependency */,
+			);
+			name = NetGuruTestTests;
+			productName = NetGuruTestTests;
+			productReference = B16D6E4E2578BDF1000A804E /* NetGuruTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -300,6 +363,10 @@
 				TargetAttributes = {
 					B148D1032574D79300E968D5 = {
 						CreatedOnToolsVersion = 12.2;
+					};
+					B16D6E4D2578BDF1000A804E = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = B148D1032574D79300E968D5;
 					};
 				};
 			};
@@ -317,6 +384,7 @@
 			projectRoot = "";
 			targets = (
 				B148D1032574D79300E968D5 /* NetGuruTest */,
+				B16D6E4D2578BDF1000A804E /* NetGuruTestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -328,6 +396,13 @@
 			files = (
 				B148D10F2574D79400E968D5 /* Preview Assets.xcassets in Resources */,
 				B148D10C2574D79400E968D5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B16D6E4C2578BDF1000A804E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,18 +467,33 @@
 				B16577272576B9D500150180 /* GetRealTimeTradesOrchestraRepository.swift in Sources */,
 				B16577232576B4EA00150180 /* PriceAnalyzerWithML.swift in Sources */,
 				B165771C2576B43400150180 /* PriceAnalyzer.swift in Sources */,
-				B13CB4722574E1F400336FEF /* Output.swift in Sources */,
 				B136886725762E31003252EA /* RealTimeTradesViewModel.swift in Sources */,
 				B13CB46E2574E14C00336FEF /* TradePersistRepository.swift in Sources */,
 				B136886C257630C2003252EA /* V1RealTimeTradesUseCase.swift in Sources */,
 				B136886425758275003252EA /* GetRealTimeTradesWebSocketRepository.swift in Sources */,
 				B13CB4642574DEF300336FEF /* RealTimeTradesUseCase.swift in Sources */,
-				B1368861257581DB003252EA /* Input.swift in Sources */,
 				B13CB46B2574DFB400336FEF /* GetRealTimeTradesRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B16D6E4A2578BDF1000A804E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B16D6E772578C98C000A804E /* RealTimeTradesUseCaseTests.swift in Sources */,
+				B16D6E512578BDF1000A804E /* NetGuruTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B16D6E542578BDF1000A804E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B148D1032574D79300E968D5 /* NetGuruTest */;
+			targetProxy = B16D6E532578BDF1000A804E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B148D1112574D79400E968D5 /* Debug */ = {
@@ -532,15 +622,15 @@
 				DEVELOPMENT_ASSET_PATHS = "\"NetGuruTest/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = NetGuruTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.juanagu.NetGuruTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juanagu.netgurutest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -554,15 +644,53 @@
 				DEVELOPMENT_ASSET_PATHS = "\"NetGuruTest/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = NetGuruTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.juanagu.NetGuruTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juanagu.netgurutest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B16D6E552578BDF1000A804E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NetGuruTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juanagu.NetGuruTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetGuruTest.app/NetGuruTest";
+			};
+			name = Debug;
+		};
+		B16D6E562578BDF1000A804E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NetGuruTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juanagu.NetGuruTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetGuruTest.app/NetGuruTest";
 			};
 			name = Release;
 		};
@@ -583,6 +711,15 @@
 			buildConfigurations = (
 				B148D1142574D79400E968D5 /* Debug */,
 				B148D1152574D79400E968D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B16D6E572578BDF1000A804E /* Build configuration list for PBXNativeTarget "NetGuruTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B16D6E552578BDF1000A804E /* Debug */,
+				B16D6E562578BDF1000A804E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

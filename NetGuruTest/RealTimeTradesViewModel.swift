@@ -32,6 +32,10 @@ public class RealTimeTradesViewModel: ObservableObject {
         
     }
     
+    func dispose(){
+        useCase.dispose()
+    }
+    
     public func addTrade(trade: Trade) {
         if(self.hasMaxCapacity()){
             self.trades.removeAll()

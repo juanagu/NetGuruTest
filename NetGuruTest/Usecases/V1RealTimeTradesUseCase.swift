@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 
-class V1RealTimeTradesUseCase : RealTimeTradesUseCase {
+public class V1RealTimeTradesUseCase : RealTimeTradesUseCase {
     
     private var getRealTimeTradesRepository: GetRealTimeTradesRepository
     private var priceAnalyzer : PriceAnalyzer
@@ -24,14 +24,13 @@ class V1RealTimeTradesUseCase : RealTimeTradesUseCase {
         self.tradePersistRepository = tradePersistRepository
     }
     
-    func execute() -> Observable<Trade> {
+    public func execute() -> Observable<Trade> {
         getRealTimeTradesRepository
             .connect()
-            .subscribe(onNext: { (Trade) in
-                let sentiment = self.priceAnalyzer.execute(price: Trade.price);
-                let tradeWithSentiment = Trade.withSentiment(sentiment: sentiment);
-                self.observer?.onNext(tradeWithSentiment)
-                self.tradePersistRepository.save(trade: tradeWithSentiment)
+            .subscribe(onNext: { (trade) in
+                let analyzedTrade = self.analyze(trade: trade)
+                self.observer?.onNext(analyzedTrade)
+                self.tradePersistRepository.save(trade: analyzedTrade)
             }, onError: { (Error) in
                 self.observer?.onError(Error)
             }, onCompleted: {
@@ -47,5 +46,15 @@ class V1RealTimeTradesUseCase : RealTimeTradesUseCase {
             return Disposables.create()
         };
         
+    }
+    
+    public func dispose() {
+        disposeBag = DisposeBag()
+        getRealTimeTradesRepository.disconnect()
+    }
+    
+    private func analyze(trade: Trade) -> Trade{
+        let sentiment = self.priceAnalyzer.execute(price: trade.price);
+        return trade.withSentiment(sentiment: sentiment);
     }
 }

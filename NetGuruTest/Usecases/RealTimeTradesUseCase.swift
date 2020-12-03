@@ -9,5 +9,6 @@ import Foundation
 import RxSwift
 
 public protocol RealTimeTradesUseCase {
-    func execute() -> Observable<Trade>;
+    func execute() -> Observable<Trade>
+    func dispose()
 }

@@ -11,3 +11,8 @@ target 'NetGuruTest' do
   pod 'RxSwift', '6.0.0-rc.2'
   pod 'RxCocoa', '6.0.0-rc.2'
 end
+
+target 'NetGuruTestTests' do
+    pod 'RxBlocking', '6.0.0-rc.2'
+    pod 'RxTest', '6.0.0-rc.2'
+end

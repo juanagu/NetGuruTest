@@ -8,19 +8,19 @@
 import Foundation
 import SwiftUI
 
-public class GetRealTimeTradesFeature{
+public struct GetRealTimeTradesFeature{
     
     func build() -> RealTimeTradesView
     {
         return RealTimeTradesView(viewModel: provideViewModel())
     }
     
-    fileprivate func provideViewModel() -> RealTimeTradesViewModel
+    private func provideViewModel() -> RealTimeTradesViewModel
     {
         return RealTimeTradesViewModel(useCase: provideUseCase())
     }
     
-    fileprivate func provideUseCase() -> RealTimeTradesUseCase
+    private func provideUseCase() -> RealTimeTradesUseCase
     {
         return V1RealTimeTradesUseCase(
             getRealTimeTradesRepository: provideGetRepository(),
@@ -28,17 +28,17 @@ public class GetRealTimeTradesFeature{
             tradePersistRepository: provideTradePersistRepository())
     }
     
-    fileprivate func provideGetRepository() -> GetRealTimeTradesRepository{
+    private func provideGetRepository() -> GetRealTimeTradesRepository{
         return GetRealTimeTradesOrchestraRepository(
             repositoryRules: provideRepositoryRules())
     }
     
-    fileprivate func providePriceAnalyzer() -> PriceAnalyzer
+    private func providePriceAnalyzer() -> PriceAnalyzer
     {
         return PriceAnalyzerWithML();
     }
     
-    fileprivate func provideRepositoryRules() -> [RepositoryRule]
+    private func provideRepositoryRules() -> [RepositoryRule]
     {
         return [
             RepositoryRule(maxRecords: 100,
@@ -48,7 +48,7 @@ public class GetRealTimeTradesFeature{
         ]
     }
     
-    fileprivate func provideTradePersistRepository() -> TradePersistRepository{
+    private func provideTradePersistRepository() -> TradePersistRepository{
         return TradePersistLoggerRepository()
     }
 }

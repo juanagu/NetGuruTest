@@ -21,6 +21,7 @@ struct RealTimeTradesView: View {
                 .navigationBarTitle("Real Time Trades")
         }
         .onAppear { self.viewModel.fetch() }
+        .onDisappear { self.viewModel.dispose() }
     }
     
     
